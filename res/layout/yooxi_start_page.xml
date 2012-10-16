@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <LinearLayout
+        android:id="@+id/index_image_1"
+    	android:layout_width="497dp"
+    	android:layout_height="369dp"
+    	android:layout_marginLeft="10dp"
+    	android:layout_marginTop="10dp"
+    	android:background="#FF000000">
+        
+    </LinearLayout>   
+     
+	<LinearLayout
+	    android:id="@+id/index_image_2"
+	    android:layout_toRightOf="@id/index_image_1"
+    	android:layout_width="497dp"
+    	android:layout_height="369dp"
+    	android:layout_marginLeft="10dp"
+    	android:layout_marginTop="10dp"
+    	android:background="#FF000000">
+        
+    </LinearLayout>    
+    
+    <LinearLayout
+	    android:id="@+id/index_image_3"
+	    android:layout_below="@+id/index_image_1"
+    	android:layout_width="497dp"
+    	android:layout_height="369dp"
+    	android:layout_marginLeft="10dp"
+    	android:layout_marginTop="10dp"
+    	android:background="#FF000000">        
+    </LinearLayout>
+    
+    <LinearLayout
+	    android:id="@+id/index_image_4"
+	    android:layout_below="@id/index_image_2"
+	    android:layout_toRightOf="@id/index_image_3"
+    	android:layout_width="497dp"
+    	android:layout_height="369dp"
+    	android:layout_marginLeft="10dp"
+    	android:layout_marginTop="10dp"
+    	android:background="#FF000000">        
+    </LinearLayout>  
+    
+    <LinearLayout
+        android:id="@+id/center_logo"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:padding="10dp"
+        android:background="#FFFFFFFF"
+        android:layout_centerInParent="true"
+        >
+    <ImageView 
+        android:id="@+id/index_logo"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:src="@drawable/aitalogo"
+        ></ImageView>
+        
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/imagename_label_1" 
+        android:layout_width="189dp"
+        android:layout_height="45dp"
+        android:background="#FF67b600"
+        android:layout_alignRight="@id/index_image_1"
+        android:layout_above="@id/center_logo"       
+        >
+        <TextView
+            android:text="咖啡饮品一"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_gravity="center_vertical"
+            android:textSize="20dp"
+            android:layout_marginLeft="12dp"
+            ></TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/imagename_label_2" 
+        android:layout_width="189dp"
+        android:layout_height="45dp"
+        android:background="#FF67b600"
+        android:layout_toRightOf="@id/center_logo"
+        android:layout_alignBottom="@id/index_image_2"
+        android:layout_marginTop="-46dp"
+        >
+ 		<TextView
+            android:text="咖啡饮品一"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_gravity="center_vertical"
+            android:textSize="20dp"
+            android:layout_marginLeft="12dp"
+            ></TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/imagename_label_3" 
+        android:layout_width="189dp"
+        android:layout_height="45dp"
+        android:background="#FF67b600"
+        android:layout_toLeftOf="@id/center_logo"
+        android:layout_alignTop="@id/index_image_3"
+
+        >
+        <TextView
+            android:text="咖啡饮品一"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_gravity="center_vertical"
+            android:textSize="20dp"
+            android:layout_marginLeft="12dp"
+            ></TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/imagename_label_4"
+        android:layout_width="189dp"
+        android:layout_height="45dp"
+        android:background="#FF67b600"
+        android:layout_below="@id/center_logo"
+        android:layout_alignLeft="@id/index_image_4"
+
+        >
+        <TextView
+            android:text="咖啡饮品一"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_gravity="center_vertical"
+            android:textSize="20dp"
+            android:layout_marginLeft="12dp"
+            ></TextView>
+    </LinearLayout>
+</RelativeLayout>
