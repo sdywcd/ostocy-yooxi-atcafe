@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    
+    <TextView 
+        android:id="@+id/coffename"
+        android:text="咖啡饮品"
+        android:padding="10dp"
+        android:textSize="24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    
+    <TextView 
+        android:id="@+id/coffenum"
+        android:text="×2，"
+        android:padding="10dp"
+        android:textSize="24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/coffeecost"/>
+    <TextView 
+        android:id="@+id/coffeecost"
+        android:text="22元"
+        android:padding="10dp"
+        android:textSize="24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/numplus"/>
+    <TextView 
+        android:id="@+id/numplus"
+        android:text="+"
+        android:padding="10dp"
+        android:textSize="24dp"
+        android:layout_width="48dp"
+        android:textColor="#ffffffff"
+        android:layout_height="wrap_content"
+        android:background="#ff67b600"
+        android:gravity="center"
+        android:layout_marginRight="1dp"
+        android:layout_toLeftOf="@id/numminus"/>
+     <TextView 
+        android:id="@+id/numminus"
+        android:text="-"
+        android:padding="10dp"
+        android:textSize="24dp"
+        android:background="#ff67b600"
+        android:textColor="#ffffffff"
+        android:layout_width="48dp"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"/>
+
+</RelativeLayout>
