@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp">
+    
+    <ImageView
+        android:id="@+id/listatlogo"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/aitalogo"
+        android:scaleType="centerInside">
+        
+    </ImageView>
+
+    <TextView
+        android:id="@+id/listtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/listatlogo"
+        android:layout_toRightOf="@+id/listatlogo"
+        android:layout_marginLeft="20dp"
+        android:text="已选择" />
+    
+    <TextView
+        android:id="@+id/clearall"
+        android:text="清空所有"
+        android:textSize="24dp"
+        android:textColor="#FFffffff"
+        android:background="#ff383838"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentRight="true"></TextView>
+    <TextView
+        android:id="@+id/confirm"
+        android:text="确定并继续选择"
+        android:textSize="24dp"
+        android:textColor="#FFffffff"
+        android:background="#ffea0404"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+		android:layout_alignParentBottom="true"
+		android:layout_toLeftOf="@id/clearall"
+		android:layout_marginRight="1dp"></TextView>
+    <TextView
+        android:id="@+id/countmoney"
+        android:text="共计:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:textColor="#ffc30000"
+        android:layout_above="@id/clearall"
+        android:layout_toRightOf="@id/listtitle">
+        
+    </TextView>
+	<ListView 
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_toRightOf="@id/listtitle"
+	    android:layout_toLeftOf="@id/clearall"
+	    android:layout_below="@id/listtitle"
+	    android:layout_above="@id/countmoney"></ListView>
+</RelativeLayout>
