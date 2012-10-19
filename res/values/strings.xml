@@ -60,4 +60,6 @@
 	<string name="changeview">切换模式</string>
 	<string name="recommend">推荐菜</string>
 	<string name="classify">菜单分类</string>
+	<string name="leftsharpbracket">&lt;</string>
+	<string name="rightsharpbracket">&gt;</string>
 </resources>
