@@ -4,45 +4,64 @@
     android:layout_height="match_parent" >
     
     <LinearLayout
-        android:id="@+id/index_image_1"
+        android:id="@+id/index_layout_1"
     	android:layout_width="497dp"
     	android:layout_height="369dp"
     	android:layout_marginLeft="10dp"
     	android:layout_marginTop="10dp"
     	android:background="#FF000000">
         
+        <ImageView 
+            android:id="@+id/indexlefttopimage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
     </LinearLayout>   
      
 	<LinearLayout
-	    android:id="@+id/index_image_2"
-	    android:layout_toRightOf="@id/index_image_1"
+	    android:id="@+id/index_layout_2"
+	    android:layout_toRightOf="@id/index_layout_1"
     	android:layout_width="497dp"
     	android:layout_height="369dp"
     	android:layout_marginLeft="10dp"
     	android:layout_marginTop="10dp"
     	android:background="#FF000000">
         
+	    <ImageView 
+            android:id="@+id/indexrighttopimage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+	    
     </LinearLayout>    
     
     <LinearLayout
-	    android:id="@+id/index_image_3"
-	    android:layout_below="@+id/index_image_1"
+	    android:id="@+id/index_layout_3"
+	    android:layout_below="@+id/index_layout_1"
     	android:layout_width="497dp"
     	android:layout_height="369dp"
     	android:layout_marginLeft="10dp"
     	android:layout_marginTop="10dp"
-    	android:background="#FF000000">        
+    	android:background="#FF000000">
+	    
+        <ImageView 
+            android:id="@+id/indexleftbottomimage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
     </LinearLayout>
     
     <LinearLayout
-	    android:id="@+id/index_image_4"
-	    android:layout_below="@id/index_image_2"
-	    android:layout_toRightOf="@id/index_image_3"
+	    android:id="@+id/index_layout_4"
+	    android:layout_below="@id/index_layout_2"
+	    android:layout_toRightOf="@id/index_layout_3"
     	android:layout_width="497dp"
     	android:layout_height="369dp"
     	android:layout_marginLeft="10dp"
     	android:layout_marginTop="10dp"
-    	android:background="#FF000000">        
+    	android:background="#FF000000">
+        
+        <ImageView 
+            android:id="@+id/indexrightbottomimage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
     </LinearLayout>  
     
     <LinearLayout
@@ -67,11 +86,12 @@
         android:layout_width="189dp"
         android:layout_height="45dp"
         android:background="#FF67b600"
-        android:layout_alignRight="@id/index_image_1"
+        android:layout_alignRight="@id/index_layout_1"
         android:layout_above="@id/center_logo"       
         >
         <TextView
             android:text="咖啡饮品一"
+            android:id="@+id/lefttopimage_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/white"
@@ -86,11 +106,12 @@
         android:layout_height="45dp"
         android:background="#FF67b600"
         android:layout_toRightOf="@id/center_logo"
-        android:layout_alignBottom="@id/index_image_2"
+        android:layout_alignBottom="@id/index_layout_2"
         android:layout_marginTop="-46dp"
         >
  		<TextView
-            android:text="咖啡饮品一"
+            android:text="咖啡饮品二"
+            android:id="@+id/righttopimage_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/white"
@@ -105,11 +126,12 @@
         android:layout_height="45dp"
         android:background="#FF67b600"
         android:layout_toLeftOf="@id/center_logo"
-        android:layout_alignTop="@id/index_image_3"
+        android:layout_alignTop="@id/index_layout_3"
 
         >
         <TextView
-            android:text="咖啡饮品一"
+            android:text="咖啡饮品三"
+            android:id="@+id/leftbottomimage_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/white"
@@ -124,11 +146,12 @@
         android:layout_height="45dp"
         android:background="#FF67b600"
         android:layout_below="@id/center_logo"
-        android:layout_alignLeft="@id/index_image_4"
+        android:layout_alignLeft="@id/index_layout_4"
 
         >
         <TextView
-            android:text="咖啡饮品一"
+            android:text="咖啡饮品四"
+            android:id="@+id/rightbottomimage_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/white"
