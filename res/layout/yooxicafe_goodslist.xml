@@ -3,5 +3,71 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
     
-
+    <RelativeLayout
+        android:layout_width='match_parent'
+        android:layout_height="180dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp">
+        
+        <ImageView
+ 			android:layout_width="116dp"
+ 			android:layout_height="116dp"
+ 			android:scaleType="centerInside"
+ 			android:layout_marginLeft="19dp"
+ 			android:layout_marginTop="19dp"
+ 			android:src="@drawable/aitalogo">
+            
+        </ImageView>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="54dp"
+            android:layout_marginLeft="213dp"
+            android:src="@drawable/fangzhengaitacafe">
+        </ImageView>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="104dp"
+            android:layout_marginLeft="213dp"
+            android:src="@drawable/website">
+            
+        </ImageView>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+			android:layout_marginTop="154dp"
+            android:layout_marginLeft="168dp"
+            android:src="@drawable/systemname">
+            
+        </ImageView>
+        <ImageView
+            android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="410dp"
+			android:layout_marginTop="33dp"
+			android:src="@drawable/qrcodedemo">
+            
+        </ImageView>
+        
+        <ImageView
+            android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="587dp"
+			android:layout_marginTop="33dp"
+			android:src="@drawable/advtop">
+            
+        </ImageView>
+        
+        <LinearLayout
+            android:layout_width="350dp"
+            android:layout_height="3dp"
+            android:background="#fff8e444"
+            android:layout_marginLeft="19dp"
+            android:layout_marginTop="177dp">
+            
+        </LinearLayout>
+    </RelativeLayout>
+        
 </RelativeLayout>
