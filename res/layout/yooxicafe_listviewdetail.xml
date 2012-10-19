@@ -32,7 +32,6 @@
         android:background="#ff67b600"
         android:gravity="center"
         android:layout_marginRight="1dp"
-       	android:layout_toLeftOf="@id/numminus"/>
      <TextView 
         android:id="@+id/coffenum"
         android:text="×2，"
