@@ -4,14 +4,14 @@
     android:layout_height="wrap_content">
     
     <TextView 
-        android:id="@+id/coffename"
+        android:id="@+id/goodsname"
         android:text="咖啡饮品"
         android:padding="10dp"
         android:textSize="24dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
     <TextView 
-        android:id="@+id/numminus"
+        android:id="@+id/minus"
         android:text="-"
         android:padding="10dp"
         android:textSize="24dp"
@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"/>
      <TextView 
-        android:id="@+id/numplus"
+        android:id="@+id/plus"
         android:text="+"
         android:padding="10dp"
         android:textSize="24dp"
@@ -32,22 +32,22 @@
         android:background="#ff67b600"
         android:gravity="center"
         android:layout_marginRight="1dp"
-        android:layout_toLeftOf="@+id/numminus"/>
+        android:layout_toLeftOf="@+id/minus"/>
      <TextView 
-        android:id="@+id/coffeecost"
+        android:id="@+id/memberprice"
         android:text="22元"
         android:padding="10dp"
         android:textSize="24dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toLeftOf="@id/numplus"/>
+        android:layout_toLeftOf="@id/plus"/>
      <TextView 
-        android:id="@+id/coffenum"
+        android:id="@+id/needquantity"
         android:text="×2，"
         android:padding="10dp"
         android:textSize="24dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toLeftOf="@id/coffeecost"/>
+        android:layout_toLeftOf="@id/memberprice"/>
 
 </RelativeLayout>

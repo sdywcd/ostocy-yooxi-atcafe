@@ -77,7 +77,7 @@
         android:background="@color/white_grey"
         android:orientation="horizontal"
         android:weightSum="1" >
-
+
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="fill_parent"
@@ -87,12 +87,13 @@
             <ImageView
                 android:id="@+id/goodsimage"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="463dp"
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"
                 android:layout_marginTop="12dp"
+                android:layout_weight="0.93"
                 android:scaleType="fitXY" >
-"
+"
             </ImageView>
         </LinearLayout>
 
