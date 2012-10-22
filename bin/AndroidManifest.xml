@@ -8,7 +8,7 @@
     <application android:label="@string/app_name"
         android:icon="@drawable/ic_launcher"
         android:theme="@style/AppTheme">
-		<activity android:name="com.ostocy.yooxi.index.JshopMNewIndex"
+		<activity android:name="com.ostocy.yooxi.index.YooxiCoffeeIndexV1"
                   android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,7 +18,7 @@
 		<activity android:name="com.ostocy.yooxi.util.JshopActivityUtil" />
 		<activity android:name="com.ostocy.yooxi.shop.JshopActivityNGoodsList"/>
 		<activity android:name="com.ostocy.yooxi.shop.JshopActivityNGoodsViewPager"/>
-		
+		<activity android:name="com.ostocy.yooxi.shop.YooxiCoffeeGoodsDetail"/>
 		
     </application>
  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />

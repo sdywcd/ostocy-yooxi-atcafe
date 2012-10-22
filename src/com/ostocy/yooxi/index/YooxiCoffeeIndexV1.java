@@ -9,11 +9,13 @@ import java.util.Map;
 import com.ostocy.yooxi.action.JshopMGoodsListAction;
 import com.ostocy.yooxi.action.JshopMgoodscategoryListAction;
 import com.ostocy.yooxi.holder.YooxiCoffeeIndexViewHolder;
+import com.ostocy.yooxi.shop.YooxiCoffeeGoodsDetail;
 import com.ostocy.yooxi.sqlite.DBHelper;
 import com.ostocy.yooxiatcafe.R;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.os.Bundle;
@@ -71,7 +73,6 @@ public class YooxiCoffeeIndexV1 extends Activity {
 	
 	private void startViewPager(){
 		viewPager = (ViewPager) this.findViewById(R.id.indexViewPager);
-		JshopMGoodsListAction jmGoodsListAction = new JshopMGoodsListAction();
 		YooxiIndexPagerAdapter mPagerAdapter = new YooxiIndexPagerAdapter(goodslists);
 		viewPager.setAdapter(mPagerAdapter);
 	}
@@ -111,7 +112,7 @@ public class YooxiCoffeeIndexV1 extends Activity {
 		@Override
 		public Object instantiateItem(View container, final int position) {
 			// TODO Auto-generated method stub
-
+			
 			//View v = new View(ctx);
 			LayoutInflater inflater=getLayoutInflater();			
 			View v=(View)inflater.inflate(R.layout.yooxi_start_page, null);
@@ -123,33 +124,60 @@ public class YooxiCoffeeIndexV1 extends Activity {
 			holder.setRighttoptext((TextView) v.findViewById(R.id.righttopimage_name));
 			holder.setLeftbottomtext((TextView) v.findViewById(R.id.leftbottomimage_name));
 			holder.setRighttoptext((TextView) v.findViewById(R.id.righttopimage_name));
-		
-			
-/*			try {
-				holder.getPictureurl().setImageBitmap((Bitmap) JshopMGoodsListAction.GetLocalOrNetBitmapWithoutScale(goodslists.get(position).get("pictureurl").toString()));
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}*/
-			int basepostion = position*4;
-			if(!goodslists.get(basepostion).isEmpty()){
-				holder.getLefttoptext().setText(goodslists.get(basepostion).get("goodsname").toString());	
-			}
-			
-/*			holder.getRighttoptext().setText(goodslists.get(basepostion+1).get("goodsname").toString());
-			holder.getLeftbottomtext().setText(goodslists.get(basepostion+2).get("goodsname").toString());
-			holder.getRightbottomtext().setText(goodslists.get(basepostion+3).get("goodsname").toString());*/
-		  /*holder.getGoodsname().setText(goodslists.get(position).get("goodsname").toString());
-			holder.getWeight().setText(goodslists.get(position).get("weight").toString());
-			holder.getMemberprice().setText(goodslists.get(position).get("memberprice").toString());
-			holder.getUnitname().setText(goodslists.get(position).get("unitname").toString());
-			holder.getDetail().setText(Html.fromHtml(goodslists.get(position).get("detail").toString()));
-			holder.getAddtomyelecartmenu().setOnClickListener(new OnClickListener(){
-			@Override
-			public void onClick(View v) {
-				//showConfirmAddtoCart(goodslists,position);
+			final int i0;
+			int i1, i2, i3;
+			i0=4*position+0;
+			i1=4*position+1;
+			i2=4*position+2;
+			i3=4*position+3;
+			if(goodslists.get(i0)!=null){
+				holder.getLefttoptext().setText(goodslists.get(i0).get("goodsname").toString());
+				try {
+					holder.getLefttopimage().setImageBitmap(jmGoodslistAction.GetLocalOrNetBitmapWithoutScale(goodslists.get(i0).get("pictureurl").toString(),2));
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
 				}
-			});*/
+				holder.getLefttopimage().setOnClickListener(new OnClickListener(){
+					@Override
+					public void onClick(View v) {
+						// TODO Auto-generated method stub
+						//进入对应的详细页去
+						Intent intent= new Intent(YooxiCoffeeIndexV1.this, YooxiCoffeeGoodsDetail.class);
+						intent.putExtra("goodsid", goodslists.get(i0).get("goodsid").toString());
+						startActivity(intent);
+						
+					}
+				});
+			}
+			if(goodslists.get(i1)!=null){
+				holder.getLeftbottomtext().setText(goodslists.get(i1).get("goodsname").toString());
+				try {
+					holder.getLeftbottomimage().setImageBitmap(jmGoodslistAction.GetLocalOrNetBitmapWithoutScale(goodslists.get(i1).get("pictureurl").toString(),2));
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			if(goodslists.get(i2)!=null){
+				holder.getRighttoptext().setText(goodslists.get(i2).get("goodsname").toString());
+				try {
+					holder.getRighttopimage().setImageBitmap(jmGoodslistAction.GetLocalOrNetBitmapWithoutScale(goodslists.get(i2).get("pictureurl").toString(),2));
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+//			if(goodslists.get(i3)!=null){
+//				holder.getRightbottomtext().setText(goodslists.get(i3).get("goodsname").toString());
+//				try {
+//					holder.getRightbottomimage().setImageBitmap(jmGoodslistAction.GetLocalOrNetBitmapWithoutScale(goodslists.get(i3).get("pictureurl").toString(),2));
+//				} catch (IOException e) {
+//					// TODO Auto-generated catch block
+//					e.printStackTrace();
+//				}
+//			}
+			
 			((ViewPager) container).addView(v);
 			return v;
 		}
@@ -197,4 +225,11 @@ public class YooxiCoffeeIndexV1 extends Activity {
 		}
 		
 	}
+	
+	
+	
+	
+	
+	
+	
 }

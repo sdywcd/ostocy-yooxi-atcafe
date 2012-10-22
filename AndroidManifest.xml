@@ -18,7 +18,7 @@
 		<activity android:name="com.ostocy.yooxi.util.JshopActivityUtil" />
 		<activity android:name="com.ostocy.yooxi.shop.JshopActivityNGoodsList"/>
 		<activity android:name="com.ostocy.yooxi.shop.JshopActivityNGoodsViewPager"/>
-		
+		<activity android:name="com.ostocy.yooxi.shop.YooxiCoffeeGoodsDetail"/>
 		
     </application>
  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />

@@ -160,7 +160,7 @@ public class JshopActivityNGoodsViewPager extends Activity {
 			holder.setDetail((TextView) v.findViewById(R.id.goodsdetail));
 			holder.setAddtomyelecartmenu((ImageView) v.findViewById(R.id.addtomyelecartmenu));
 			try {
-				holder.getPictureurl().setImageBitmap(jmGoodsListAction.GetLocalOrNetBitmapWithoutScale(goodslist.get(position).get("pictureurl").toString()));
+				holder.getPictureurl().setImageBitmap(jmGoodsListAction.GetLocalOrNetBitmapWithoutScale(goodslist.get(position).get("pictureurl").toString(),2));
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
