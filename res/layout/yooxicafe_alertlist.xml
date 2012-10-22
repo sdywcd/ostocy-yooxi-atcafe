@@ -57,6 +57,7 @@
         
     </TextView>
 	<ListView 
+	    android:id="@+id/yooxicartlistview"
 	    android:layout_width="match_parent"
 	    android:layout_height="match_parent"
 	    android:layout_toRightOf="@id/listtitle"
