@@ -144,7 +144,7 @@ public class JshopMGoodsListAction {
 		HashMap<String, Object> map = new HashMap<String, Object>();
 		c.moveToFirst();
 		String rowpicturl =subStringPictureurl(c.getString(c.getColumnIndex("pictureurl")));
-		map.put("pictureurl", GetLocalOrNetBitmapWithoutScale(rowpicturl));
+		map.put("pictureurl", GetLocalOrNetBitmapWithoutScale(rowpicturl,2));
 		findpiclist.add(map);
 		return findpiclist;
 	}
@@ -154,9 +154,11 @@ public class JshopMGoodsListAction {
 	 * @return
 	 * @throws IOException
 	 */
-	public static Bitmap GetLocalOrNetBitmapWithoutScale(String url) throws IOException
+	public static Bitmap GetLocalOrNetBitmapWithoutScale(String url,int zoomsize) throws IOException
 	{
 		String sdcard=Environment.getExternalStorageDirectory().getPath();
+		BitmapFactory.Options options=new BitmapFactory.Options();
+		options.inSampleSize=zoomsize;
 		Bitmap bitmap=BitmapFactory.decodeFile(sdcard+url);
 		return bitmap;
 	}
@@ -239,7 +241,7 @@ public class JshopMGoodsListAction {
 	public ArrayList<HashMap<String,Object>> getGoodsListSQLiteNoBitmap(Cursor c) throws IOException{
 		goodslists.clear();
 		c.moveToFirst();
-		while(!c.isAfterLast()){//！！！！
+		while(!c.isAfterLast()){
 			HashMap<String,Object> map = new HashMap<String,Object>();
 			map.put("goodsid", c.getString(c.getColumnIndex("goodsid")));
 			map.put("goodsname", c.getString(c.getColumnIndex("goodsname")));
@@ -256,7 +258,7 @@ public class JshopMGoodsListAction {
 	}
 	
 	/**
-	 * 读取商品列表换群从sqlite
+	 * 读取商品列表从sqlite
 	 * 
 	 * @param c
 	 * @return
@@ -282,7 +284,7 @@ public class JshopMGoodsListAction {
 		return goodslists;
 	}
 	/**
-	 * 读取商品列表换群从sqlite不压缩
+	 * 读取商品列表从sqlite不压缩
 	 * 
 	 * @param c
 	 * @return

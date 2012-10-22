@@ -1,73 +1,265 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+ android:orientation="vertical"
+    android:weightSum="1" >
     
     <RelativeLayout
-        android:layout_width='match_parent'
+        android:layout_width="match_parent"
         android:layout_height="180dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="10dp">
-        
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp" >
+
         <ImageView
- 			android:layout_width="116dp"
- 			android:layout_height="116dp"
- 			android:scaleType="centerInside"
- 			android:layout_marginLeft="19dp"
- 			android:layout_marginTop="19dp"
- 			android:src="@drawable/aitalogo">
-            
-        </ImageView>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="54dp"
-            android:layout_marginLeft="213dp"
-            android:src="@drawable/fangzhengaitacafe">
-        </ImageView>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="104dp"
-            android:layout_marginLeft="213dp"
-            android:src="@drawable/website">
-            
-        </ImageView>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-			android:layout_marginTop="154dp"
-            android:layout_marginLeft="168dp"
-            android:src="@drawable/systemname">
-            
-        </ImageView>
-        <ImageView
-            android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:layout_marginLeft="410dp"
-			android:layout_marginTop="33dp"
-			android:src="@drawable/qrcodedemo">
-            
-        </ImageView>
-        
-        <ImageView
-            android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:layout_marginLeft="587dp"
-			android:layout_marginTop="33dp"
-			android:src="@drawable/advtop">
-            
-        </ImageView>
-        
-        <LinearLayout
-            android:layout_width="350dp"
-            android:layout_height="3dp"
-            android:background="#fff8e444"
+            android:layout_width="116dp"
+            android:layout_height="116dp"
             android:layout_marginLeft="19dp"
-            android:layout_marginTop="177dp">
-            
+            android:layout_marginTop="19dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/aitalogo" >
+        </ImageView>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="213dp"
+            android:layout_marginTop="54dp"
+            android:src="@drawable/fangzhengaitacafe" >
+        </ImageView>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="213dp"
+            android:layout_marginTop="104dp"
+            android:src="@drawable/website" >
+        </ImageView>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="168dp"
+            android:layout_marginTop="154dp"
+            android:src="@drawable/systemname" >
+        </ImageView>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="410dp"
+            android:layout_marginTop="33dp"
+            android:src="@drawable/qrcodedemo" >
+        </ImageView>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="587dp"
+            android:layout_marginTop="33dp"
+            android:src="@drawable/advtop" >
+        </ImageView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="19dp"
+            android:layout_marginTop="177dp"
+            android:background="#fff8e444" >
         </LinearLayout>
-    </RelativeLayout>
         
-</RelativeLayout>
+    </RelativeLayout>
+	  <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.81"
+        android:background="@color/white_grey"
+        android:orientation="horizontal"
+        android:weightSum="1" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.71"
+            android:background="@color/white_grey" >
+
+            <ImageView
+                android:id="@+id/goodsimage"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginTop="12dp"
+                android:scaleType="fitXY" >
+"
+            </ImageView>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.29"
+            android:background="@color/white_grey" >
+
+            <RelativeLayout
+                android:id="@+id/actionbutton"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp">
+                <TextView
+                    android:id="@+id/countplus"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="#ff67b600"
+                    android:text="+"
+                    android:textSize="32dp"
+                    android:textColor="#ffffffff"
+                    android:gravity="center"></TextView>
+				<TextView
+                    android:id="@+id/countminus"
+                    android:layout_toRightOf="@id/countplus"
+                    android:layout_marginLeft="1dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="#ff67b600"
+                    android:text="-"
+                    android:textSize="32dp"
+                    android:textColor="#ffffffff"
+                    android:gravity="center"></TextView>
+				<TextView
+                    android:id="@+id/selectitem"
+                    android:layout_toRightOf="@id/countminus"
+                    android:layout_marginLeft="1dp"
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:background="#ff67b600"
+                    android:text="选择"
+                    android:textSize="24dp"
+                    android:textColor="#ffffffff"
+                    android:gravity="center"></TextView>
+				<TextView
+                    android:id="@+id/checkselected"
+                    android:layout_toRightOf="@id/selectitem"
+                    android:layout_marginLeft="1dp"
+                    android:layout_width="112dp"
+                    android:layout_height="50dp"
+                    android:background="#ff67b600"
+                    android:text="查看已选"
+                    android:textSize="24dp"
+                    android:textColor="#ffffffff"
+                    android:gravity="center"></TextView>"
+            </RelativeLayout>
+			<RelativeLayout
+			    android:id="@+id/nav"
+			    android:layout_below="@id/actionbutton"
+			    android:layout_alignParentRight="true"
+			    android:layout_marginTop="12dp"
+			    android:layout_width="80dp"
+			    android:layout_height="wrap_content">
+			    
+			    <TextView
+			        android:id="@+id/getback"
+			        android:text="返回"
+			        android:layout_width="80dp"
+			        android:layout_height="140dp"
+			        android:background="#fff9e33f"
+			        android:textSize="24dp"
+			        android:gravity="center">
+			        
+			    </TextView>
+			</RelativeLayout>
+            <TextView
+                android:id="@+id/namegoods"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/actionbutton"
+                android:layout_marginTop="20dp"
+                android:text="商品名称:"
+                android:textColor="@color/black"
+                android:textSize="24dp"
+                android:textStyle="bold" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/goodsname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/namegoods"
+                android:layout_marginTop="12dp"
+                android:text="大厨XO酱干炒牛河"
+                android:textColor="@color/black"
+                android:textSize="20dp" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/nameunit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/goodsname"
+                android:layout_marginTop="12dp"
+                android:text="重量/单位:"
+                android:textColor="@color/grey_weight"
+                android:textSize="24dp" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/valueweight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/goodsname"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@id/nameunit"
+                android:text="250"
+                android:textColor="@color/grey_weight"
+                android:textSize="20dp" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/unitname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/goodsname"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@id/valueweight"
+                android:text="g"
+                android:textColor="@color/grey_weight"
+                android:textSize="20dp" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/nameprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nameunit"
+                android:layout_marginTop="12dp"
+                android:text="价格:"
+                android:textColor="@color/red_price"
+                android:textSize="26dp" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/memberprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="232dp"
+                android:layout_toRightOf="@id/nameprice"
+                android:text="￥56"
+                android:textColor="@color/red_price"
+                android:textSize="36dp" >
+            </TextView>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.19"
+        android:background="@color/white_grey"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="20dp" >
+    </LinearLayout>
+</LinearLayout>

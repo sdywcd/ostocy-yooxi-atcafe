@@ -572,8 +572,8 @@ public class JshopActivityNGoodsList extends TabActivity  implements TabContentF
 	}
 	public void startViewPager(final ArrayList<HashMap<String, Object>> goodslists,final int position) throws IOException{
 		LayoutInflater inflater=getLayoutInflater();
-		JshopMGoodsListAction jmGoodsListAction = new JshopMGoodsListAction();
-		
+//		JshopMGoodsListAction jmGoodsListAction = new JshopMGoodsListAction();
+//		
 		if(!goodslists.isEmpty()){
 			pageViews.clear();
 		}
@@ -724,7 +724,7 @@ public class JshopActivityNGoodsList extends TabActivity  implements TabContentF
 			holder.setAddtomyelecartmenu((ImageView) v.findViewById(R.id.addtomyelecartmenu));
 			
 			try {
-				holder.getPictureurl().setImageBitmap((Bitmap) JshopMGoodsListAction.GetLocalOrNetBitmapWithoutScale(goodslists.get(position).get("pictureurl").toString()));
+				holder.getPictureurl().setImageBitmap((Bitmap) JshopMGoodsListAction.GetLocalOrNetBitmapWithoutScale(goodslists.get(position).get("pictureurl").toString(),2));
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
