@@ -11,9 +11,9 @@ public class ElecartListViewHolder {
 	
 	private TextView needquantity;
 	
-	private ImageView plus;
+	private TextView plus;
 	
-	private ImageView minus;
+	private TextView minus;
 
 	public TextView getMemberprice() {
 		return memberprice;
@@ -39,22 +39,22 @@ public class ElecartListViewHolder {
 		this.needquantity = needquantity;
 	}
 
-	public ImageView getPlus() {
+	public TextView getPlus() {
 		return plus;
 	}
 
-	public void setPlus(ImageView plus) {
+	public void setPlus(TextView plus) {
 		this.plus = plus;
 	}
 
-	public ImageView getMinus() {
+	public TextView getMinus() {
 		return minus;
 	}
 
-	public void setMinus(ImageView minus) {
+	public void setMinus(TextView minus) {
 		this.minus = minus;
 	}
-	
+
 	
 	
 }

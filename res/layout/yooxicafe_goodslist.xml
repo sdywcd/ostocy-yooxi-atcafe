@@ -70,14 +70,15 @@
         </LinearLayout>
         
     </RelativeLayout>
-	  <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.81"
-        android:background="@color/white_grey"
-        android:orientation="horizontal"
-        android:weightSum="1" >
 
+	  <LinearLayout
+	      android:layout_width="fill_parent"
+	      android:layout_height="fill_parent"
+	      android:layout_weight="0.81"
+	      android:background="@color/white_grey"
+	      android:orientation="horizontal"
+	      android:weightSum="1" >
+
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="fill_parent"
@@ -88,61 +89,42 @@
                 android:id="@+id/goodsimage"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
                 android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:layout_weight="0.93"
                 android:scaleType="fitXY" >
-"
+"
             </ImageView>
         </LinearLayout>
-
+
         <RelativeLayout
             android:layout_width="0dp"
-            android:layout_height="fill_parent"
+            android:layout_height="match_parent"
             android:layout_weight="0.29"
             android:background="@color/white_grey" >
 
             <RelativeLayout
                 android:id="@+id/actionbutton"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="70dp"
                 android:layout_marginTop="12dp">
                 <TextView
                     android:id="@+id/countplus"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
                     android:background="#ff67b600"
                     android:text="+"
                     android:textSize="32dp"
                     android:textColor="#ffffffff"
                     android:gravity="center"></TextView>
 				<TextView
-                    android:id="@+id/countminus"
-                    android:layout_toRightOf="@id/countplus"
-                    android:layout_marginLeft="1dp"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:background="#ff67b600"
-                    android:text="-"
-                    android:textSize="32dp"
-                    android:textColor="#ffffffff"
-                    android:gravity="center"></TextView>
-				<TextView
-                    android:id="@+id/selectitem"
-                    android:layout_toRightOf="@id/countminus"
-                    android:layout_marginLeft="1dp"
-                    android:layout_width="80dp"
-                    android:layout_height="50dp"
-                    android:background="#ff67b600"
-                    android:text="选择"
-                    android:textSize="24dp"
-                    android:textColor="#ffffffff"
-                    android:gravity="center"></TextView>
-				<TextView
                     android:id="@+id/checkselected"
-                    android:layout_toRightOf="@id/selectitem"
-                    android:layout_marginLeft="1dp"
+                    android:layout_toRightOf="@id/countplus"
+                    android:layout_marginLeft="10dp"
                     android:layout_width="112dp"
+                    android:layout_marginTop="10dp"
                     android:layout_height="50dp"
                     android:background="#ff67b600"
                     android:text="查看已选"
@@ -253,13 +235,4 @@
         </RelativeLayout>
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.19"
-        android:background="@color/white_grey"
-        android:gravity="center_vertical"
-        android:orientation="vertical"
-        android:padding="20dp" >
-    </LinearLayout>
 </LinearLayout>

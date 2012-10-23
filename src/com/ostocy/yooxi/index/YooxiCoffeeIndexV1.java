@@ -29,6 +29,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 public class YooxiCoffeeIndexV1 extends Activity {
 	
@@ -38,6 +39,7 @@ public class YooxiCoffeeIndexV1 extends Activity {
 	private ViewGroup maingroup;	//viewGroup
 	private ViewPager viewPager;	//viewPager	
 	private ArrayList<View>pageViews = new ArrayList<View>(); //viewlist for viewPager
+	
 	
 	//保存商品分类数据对象
 	private List<Map<String,Object>>goodscategoryList=new ArrayList<Map<String,Object>>();
@@ -125,7 +127,9 @@ public class YooxiCoffeeIndexV1 extends Activity {
 			holder.setLeftbottomtext((TextView) v.findViewById(R.id.leftbottomimage_name));
 			holder.setRighttoptext((TextView) v.findViewById(R.id.righttopimage_name));
 			final int i0;
-			int i1, i2, i3;
+			final int i1;
+			final int i2;
+			int i3;
 			i0=4*position+0;
 			i1=4*position+1;
 			i2=4*position+2;
@@ -158,6 +162,17 @@ public class YooxiCoffeeIndexV1 extends Activity {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
+				holder.getLeftbottomimage().setOnClickListener(new OnClickListener(){
+					@Override
+					public void onClick(View v) {
+						// TODO Auto-generated method stub
+						//进入对应的详细页去
+						Intent intent= new Intent(YooxiCoffeeIndexV1.this, YooxiCoffeeGoodsDetail.class);
+						intent.putExtra("goodsid", goodslists.get(i1).get("goodsid").toString());
+						startActivity(intent);
+						
+					}
+				});
 			}
 			if(goodslists.get(i2)!=null){
 				holder.getRighttoptext().setText(goodslists.get(i2).get("goodsname").toString());
@@ -167,6 +182,17 @@ public class YooxiCoffeeIndexV1 extends Activity {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
+				holder.getRighttopimage().setOnClickListener(new OnClickListener(){
+					@Override
+					public void onClick(View v) {
+						// TODO Auto-generated method stub
+						//进入对应的详细页去
+						Intent intent= new Intent(YooxiCoffeeIndexV1.this, YooxiCoffeeGoodsDetail.class);
+						intent.putExtra("goodsid", goodslists.get(i2).get("goodsid").toString());
+						startActivity(intent);
+						
+					}
+				});
 			}
 //			if(goodslists.get(i3)!=null){
 //				holder.getRightbottomtext().setText(goodslists.get(i3).get("goodsname").toString());
@@ -176,6 +202,7 @@ public class YooxiCoffeeIndexV1 extends Activity {
 //					// TODO Auto-generated catch block
 //					e.printStackTrace();
 //				}
+			
 //			}
 			
 			((ViewPager) container).addView(v);
